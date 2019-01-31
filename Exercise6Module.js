@@ -6,7 +6,7 @@ module.exports = function (dirpath, ext, cb) {
 
     function a(err, data) {
         if (err) {
-            cb(err)
+            return cb(err)
         }
         var filtereddata = data.filter(x => path.extname(x) === ext)
         return cb(null, filtereddata)
